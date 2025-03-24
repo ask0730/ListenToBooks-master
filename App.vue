@@ -35,7 +35,7 @@ export default {
 /* #endif */
 /* #ifndef APP-NVUE */
 page {
-  background: #fff;
+  background: #2b2e3d;
 }
 /* #endif */
 </style>
