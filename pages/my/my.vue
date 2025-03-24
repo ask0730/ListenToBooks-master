@@ -1,7 +1,8 @@
 <template>
   <gui-page :customHeader="true" :headerClass="['gui-bg-white']" :customFooter="true">
     <template v-slot:gHeader>
-      <view style="height: 44px" class="gui-flex">
+      <view style="height: 44px;background-color:#2b2e3d
+" class="gui-flex">
         <view class="gui-flex gui-row gui-wrap gui-align-items-center gui-m-l-20">
           <text class="gui-icons gui-block gui-color-white  gui-p-10 gui-b-50 gui-bg-black-opacity1 gui-m-r-10"
           >&#xe666;</text
