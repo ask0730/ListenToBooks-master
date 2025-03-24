@@ -166,13 +166,13 @@ export default{
 		indicatorClass : {
 			type : Array, 
 			default : function(){
-				return ['gui-bg-gray','gui-dark-bg-level-5'];
+				return ['gui-bg-yellow-opacity'];
 			}
 		},
 		indicatorActiveClass : {
 			type : Array, 
 			default : function(){
-				return ['gui-bg-primary'];
+				return ['gui-bg-yellow'];
 			}
 		},
 		indicatorType:{ type : String, default : "dot" },
@@ -240,13 +240,11 @@ export default{
 }
 </script>
 <style scoped>
-.gui-swiper-card-wrap{position:relative;}
-.gui-swiper-card{overflow:hidden;}
-.gui-swiper-card-item{font-size:0; overflow:hidden; line-height:0;}
-.gui-swiper-card-nav{font-size:0; position:relative;}
-.gui-indicator-dots{width:750rpx; overflow:hidden; z-index:1; left:0; bottom:0;}
-.gui-indicator-dot{margin:6rpx;}
-.gui-indicator-dots-wrap{padding:0 20rpx;}
+.gui-swiper-card-wrap{position:relative; width:100%; height:100%;}
+.gui-indicator-dots{width:750rpx; overflow:visible; z-index:99; left:0; bottom:20rpx; position:absolute;}
+.gui-indicator-dot{margin:6rpx; display:inline-block; background-color:rgba(255,255,255,0.3);}
+.gui-indicator-dots-wrap{padding:0 20rpx; display:flex; justify-content:center; width:100%;}
+.dot-show{opacity:1; background-color:rgba(255,255,255,0.8);}
 .gui-indicator-dot-text{text-align:center; line-height:68rpx; padding:0 4rpx; color:#FFFFFF; font-size:32rpx;}
 .gui-indicator-dot-numbers{overflow:hidden; align-items:center; position:absolute; z-index:1; left:0; bottom:0;}
 .gui-swiper-text{width:200rpx; line-height:68rpx; padding-right:25rpx; overflow:hidden;}
@@ -255,3 +253,9 @@ export default{
 .dot-show{animation:dot-show 300ms linear forwards;}
 /* #endif */
 </style>
+
+
+
+
+
+
