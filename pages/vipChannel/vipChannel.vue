@@ -13,7 +13,7 @@
           </view>
           <view class="gui-list-body">
             <view class="gui-list-title">
-              <text clagui-paddingss="gui-list-title-text gui-primary-color">用户昵称</text>
+              <text clagui-paddingss="gui-list-title-text gui-color-yellow">用户昵称</text>
             </view>
             <text class="gui-list-body-desc gui-color-gray gui-block">描述信息或签名信息</text>
           </view>

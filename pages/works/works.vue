@@ -39,7 +39,7 @@
 						<view class="gui-card-desc">
 							<view class="gui-flex gui-rows gui-nowrap gui-align-items-center">
 								<text class="gui-card-name gui-primary-text gui-ellipsis">百年孤独 | 马克思传世名著(王明军演播)</text>
-								<text class="gui-card-update gui-text-small gui-primary-color">23天前更新</text>
+								<text class="gui-card-update gui-text-small gui-color-yellow">23天前更新</text>
 							</view>
 							<text class="gui-card-text gui-block gui-secondary-text gui-ellipsis" style="margin-top: 10rpx">
 								马尔克斯首部中文有声书，王明军演播马尔克斯首部中文有声书，王明军演播马尔克斯首部中文有声书，王明军演播

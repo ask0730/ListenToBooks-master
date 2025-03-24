@@ -26,7 +26,7 @@
           <image :src="item.avatarUrl" class="gui-comments-face"></image>
           <view class="gui-comments-body">
             <view class="gui-flex gui-row gui-nowrap gui-space-between gui-align-items-center">
-              <text class="gui-comments-header-text gui-text gui-primary-color">{{ item.nickname }}</text>
+              <text class="gui-comments-header-text gui-text gui-color-yellow">{{ item.nickname }}</text>
               <text @click="handlePraise(item)" class="gui-comments-header-text gui-icons gui-color-gray gui-text-small"
                 :class="[item.isPraise ? 'gui-color-orange' : '']">
                 &#xe6ea; {{ item.praiseCount }}
