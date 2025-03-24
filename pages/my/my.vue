@@ -33,7 +33,7 @@
                 </view>
               </view>
             </view>
-            <text class="gui-list-arrow-right gui-icons gui-color-gray" @click="handleGoToOtherPage('/pages/updateInfo/updateInfo')">&#xe601;</text>
+            <text class="gui-list-arrow-right gui-icons gui-color-white" @click="handleGoToOtherPage('/pages/updateInfo/updateInfo')">&#xe601;</text>
           </view>
         </view>
 
@@ -53,16 +53,16 @@
 
       <view class="gui-flex gui-space-between gui-dark-bg-level-3 gui-padding gui-m-t-20">
         <view class="gui-grid-item" @click="handleGoToOtherPage('')">
-          <text class="gui-grid-icon gui-icons gui-color-gray">&#xe634;</text>
-          <text class="gui-grid-text gui-icons gui-color-gray">VIP会员</text>
+          <text class="gui-grid-icon gui-icons gui-color-white">&#xe634;</text>
+          <text class="gui-grid-text gui-icons gui-color-white">VIP会员</text>
         </view>
         <view class="gui-grid-item" @click="handleGoToOtherPage('/pages/wallet/wallet')">
-          <text class="gui-grid-icon gui-icons gui-color-gray">&#xe612;</text>
-          <text class="gui-grid-text gui-icons gui-color-gray">我的钱包</text>
+          <text class="gui-grid-icon gui-icons gui-color-white">&#xe612;</text>
+          <text class="gui-grid-text gui-icons gui-color-white">我的钱包</text>
         </view>
         <view class="gui-grid-item" @click="handleGoToOtherPage('/pages/order/order')">
-          <text class="gui-grid-icon gui-icons gui-color-gray">&#xe62f;</text>
-          <text class="gui-grid-text gui-icons gui-color-gray">我的订单</text>
+          <text class="gui-grid-icon gui-icons gui-color-white">&#xe62f;</text>
+          <text class="gui-grid-text gui-icons gui-color-white">我的订单</text>
         </view>
       </view>
 
