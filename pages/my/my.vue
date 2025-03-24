@@ -18,7 +18,7 @@
 
     <template v-slot:gBody>
       <view class="gui-relative">
-        <view class="gui-list gui-padding gui-bg-white gui-p-b-90">
+        <view class="gui-list gui-padding gui-p-b-90">
           <view class="gui-list-items gui-relative">
             <image
               mode="aspectFill"
@@ -37,7 +37,7 @@
           </view>
         </view>
 
-        <view class="gui-absolute-lb gui-bg-white gui-creation-live">
+        <view class="gui-absolute-lb gui-creation-live">
           <view class="gui-flex gui-row gui-nowrap gui-space-around gui-p-t-20">
             <view @click="handleGoToOtherPage('/pages/myWork/myWork')" class="gui-flex gui-row gui-align-items-center">
               <text class="gui-icons gui-h3 gui-color-white">&#xe666;</text>
@@ -51,7 +51,7 @@
         </view>
       </view>
 
-      <view class="gui-flex gui-space-between gui-bg-white gui-dark-bg-level-3 gui-padding gui-m-t-20">
+      <view class="gui-flex gui-space-between gui-dark-bg-level-3 gui-padding gui-m-t-20">
         <view class="gui-grid-item" @click="handleGoToOtherPage('')">
           <text class="gui-grid-icon gui-icons gui-color-gray">&#xe634;</text>
           <text class="gui-grid-text gui-icons gui-color-gray">VIP会员</text>
@@ -66,7 +66,7 @@
         </view>
       </view>
 
-      <view class="gui-bg-white gui-dark-bg-level-3 gui-padding">
+      <view class=" gui-dark-bg-level-3 gui-padding">
         <z-paging
           ref="zPagingRef"
           :paging-style="{height:'1000rpx'}"
