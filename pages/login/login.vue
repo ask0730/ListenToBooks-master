@@ -48,7 +48,7 @@
     </gui-page>
     <!--  微信登陆弹窗-->
     <uni-popup ref="wxLoginDialogRef" type="dialog">
-        <uni-popup-dialog type="center" cancelText="取消" confirmText="确定" title="提示" content="是否使用微信进行登陆？" @confirm="userStore.loginWithWechat"></uni-popup-dialog>
+        <uni-popup-dialog type="center" cancelText="取消" confirmText="确定" title="提示" content="是否使用微信进行登录？" @confirm="userStore.loginWithWechat"></uni-popup-dialog>
     </uni-popup>
 </template>
 <script setup lang="ts">
