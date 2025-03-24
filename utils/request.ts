@@ -47,7 +47,7 @@ class Service {
                     // 设置重定向url
                     setRedirectUrl()
                   } else if (res.cancel) {
-                    console.log('用户不想登陆')
+                    console.log('用户不想登录')
                   }
                 },
               })

@@ -13,7 +13,7 @@ export const useUserStore = defineStore("user", {
     }
   },
   actions: {
-    // 微信登陆
+    // 微信登录
     loginWithWechat() {
       uni.login({
         provider: "weixin",
@@ -99,7 +99,7 @@ export const useUserStore = defineStore("user", {
         console.log(error)
       }
     },
-    // 退出登陆
+    // 退出登录
     logout() {
       uni.removeStorageSync(TOKEN_KEY)
       uni.removeStorageSync(USER_KEY)

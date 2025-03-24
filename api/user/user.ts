@@ -11,7 +11,7 @@ class CateGory extends Service {
       })
     }
   /**
-   * @description 获取用户登陆信息
+   * @description 获取用户登录信息
    */
     getUserInfo() {
       return this.get<UserInfoInterface>({

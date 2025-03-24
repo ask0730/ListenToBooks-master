@@ -3,7 +3,7 @@ import { BASE_UPLOAD_URL } from "../config/confjg"
 export const TOKEN_KEY = "token"
 // 本地存储用户信息的key
 export const USER_KEY = "user"
-// 登陆成功重定向url的key
+// 登录成功重定向url的key
 export const REDIRECT_URL_KEY = "redirectUrl"
 // 收费类型
 export const PAY_TYPE = [
