@@ -16,7 +16,7 @@
       <button
         @click="handleConfirm"
         type="default"
-        class="gui-button gui-button-mini gui-bg-blue gui-noborder"
+        class="gui-button gui-button-mini gui-bg-yellow gui-noborder"
         style="width:100rpx;">
         <text
           class="gui-color-white gui-button-text-mini gui-icons">搜索
