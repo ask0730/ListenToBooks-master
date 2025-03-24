@@ -3,13 +3,13 @@
     <template v-slot:gHeader>
       <view style="height: 44px" class="gui-flex">
         <view class="gui-flex gui-row gui-wrap gui-align-items-center gui-m-l-20">
-          <text class="gui-icons gui-block gui-color-whitegui-p-10 gui-b-50 gui-bg-black-opacity1 gui-m-r-10"
+          <text class="gui-icons gui-block gui-color-white  gui-p-10 gui-b-50 gui-bg-black-opacity1 gui-m-r-10"
           >&#xe666;</text
           >
-          <text class="gui-icons gui-block gui-color-whitegui-p-10 gui-b-50 gui-bg-black-opacity1 gui-m-r-10"
+          <text class="gui-icons gui-block gui-color-white  gui-p-10 gui-b-50 gui-bg-black-opacity1 gui-m-r-10"
           >&#xe67b;</text
           >
-          <text @click="handleGoToOtherPage('/pages/setting/setting')" class="gui-icons gui-block gui-color-whitegui-p-10 gui-b-50 gui-bg-black-opacity1">&#xe613;</text>
+          <text @click="handleGoToOtherPage('/pages/setting/setting')" class="gui-icons gui-block gui-color-white  gui-p-10 gui-b-50 gui-bg-black-opacity1">&#xe613;</text>
         </view>
         <view style="width: 200rpx"></view>
       </view>
@@ -43,7 +43,7 @@
               <text class="gui-p-l-10">创作中心</text>
             </view>
             <view @click="getLiveRoom" class="gui-flex gui-row gui-align-items-center">
-              <text class="iconfont gui-color-whitegui-h3">&#xe7d5;</text>
+              <text class="iconfont gui-color-white  gui-h3">&#xe7d5;</text>
               <text class="gui-p-l-10">录音/直播</text>
             </view>
           </view>
