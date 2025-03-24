@@ -298,7 +298,7 @@ onMounted(() => {
  }
 }
 .search-suggestion-container{
-  background-color: #fff;
+  background-color: #2b2e3d;
   width: 100%;
   position: absolute;
   z-index: 999;
