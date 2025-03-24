@@ -23,3 +23,12 @@
 .uni-popup .uni-dialog-button-group .uni-button-color {
   color: #FFD700
 }
+
+.gui-swiper-card-wrap {
+    .gui-indicator-dot {
+        background-color: rgba(255, 255, 255, 0.5) !important;
+        &.dot-show {
+            background-color: #FFD700 !important;
+        }
+    }
+}
