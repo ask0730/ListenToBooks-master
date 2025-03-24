@@ -40,11 +40,11 @@
           <view class="gui-flex gui-row gui-nowrap gui-space-around gui-p-t-20">
             <view @click="handleGoToOtherPage('/pages/myWork/myWork')" class="gui-flex gui-row gui-align-items-center">
               <text class="gui-icons gui-h3 gui-color-white">&#xe666;</text>
-              <text class="gui-p-l-10">创作中心</text>
+              <text class="gui-p-l-10 gui-color-white">创作中心</text>
             </view>
             <view @click="getLiveRoom" class="gui-flex gui-row gui-align-items-center">
               <text class="iconfont gui-color-white  gui-h3">&#xe7d5;</text>
-              <text class="gui-p-l-10">录音/直播</text>
+              <text class="gui-p-l-10 gui-color-white">录音/直播</text>
             </view>
           </view>
         </view>
