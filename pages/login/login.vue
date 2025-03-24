@@ -23,7 +23,7 @@
                             <text class="gui-text gui-color-gray gui-block gui-text-right" @tap="loginbymsg">短信登录</text>
                         </view>
                         <view style="margin-top: 38rpx">
-                            <button type="default" class="gui-button gui-bg-primary gui-noborder" formType="submit" style="border-radius: 50rpx">
+                            <button type="default" class="gui-button gui-noborder" formType="submit" style="border-radius: 50rpx;background-color:#FFD700;">
                                 <text class="gui-color-white gui-button-text">登 录</text>
                             </button>
                         </view>
