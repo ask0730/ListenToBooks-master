@@ -1,38 +1,37 @@
 <template>
-<gui-page>
-    <!-- 页面主体 -->
-    <template v-slot:gBody>
-      <view class="gui-padding gui-padding-x gui-bg-white">
-        <uni-forms label-width="100" ref="formDataRef" :rules="formDataRule" v-model="formData">
-          <!--          专辑名称-->
-          <uni-forms-item label="昵称" required name="nickname" validate-trigger="bind">
-            <uni-easyinput type="text" v-model="formData.nickname"
-                           placeholder="请输入昵称（必填）" />
-          </uni-forms-item>
-          <!--          专辑封面-->
-          <uni-forms-item label="头像" required name="avatarUrl">
-            <cl-upload
-              class="gui-flex gui-space-between"
-              v-model="avatarUrlList"
-              fileType="image"
-              :imageFormData="{
+    <gui-page>
+        <!-- 页面主体 -->
+        <template v-slot:gBody>
+            <view class="gui-padding gui-padding-x">
+                <uni-forms label-width="100" ref="formDataRef" :rules="formDataRule" v-model="formData" style="color: #fff">
+                    <!--          专辑名称-->
+                    <uni-forms-item label="昵称" required name="nickname" validate-trigger="bind">
+                        <uni-easyinput type="text" v-model="formData.nickname" placeholder="请输入昵称（必填）" />
+                    </uni-forms-item>
+                    <!--          专辑封面-->
+                    <uni-forms-item label="头像" required name="avatarUrl">
+                        <cl-upload
+                            class="gui-flex gui-space-between"
+                            v-model="avatarUrlList"
+                            fileType="image"
+                            :imageFormData="{
                 count:1,
                 sizeType:['original', 'compressed'],
               }"
-              :listStyle="{
+                            :listStyle="{
                 columns:2,
               }"
-              :add="avatarUrlList.length < 1"
-              :action="UPLOAD_URL.IMAGE"
-              @onSuccess="uploadImgSuccess"></cl-upload>
-          </uni-forms-item>
-        </uni-forms>
-        <button type="primary" @click="submit">提交</button>
-        <view style="height: 60rpx"></view>
-      </view>
-
-    </template>
-  </gui-page>
+                            :add="avatarUrlList.length < 1"
+                            :action="UPLOAD_URL.IMAGE"
+                            @onSuccess="uploadImgSuccess"
+                        ></cl-upload>
+                    </uni-forms-item>
+                </uni-forms>
+                <button type="primary" @click="submit" style="background-color:#FFD700">提交</button>
+                <view style="height: 60rpx"></view>
+            </view>
+        </template>
+    </gui-page>
 </template>
 
 <script setup lang="ts">
@@ -40,11 +39,11 @@ import { onReady, onLoad } from "@dcloudio/uni-app"
 import { ref, reactive } from "vue"
 import { user } from "../../api"
 import UniForms from "../../uni_modules/uni-forms/components/uni-forms/uni-forms.vue"
-import { useUserStore} from "../../stores/user"
+import { useUserStore } from "../../stores/user"
 import { UPLOAD_URL } from "../../utils/constant"
 const userStore = useUserStore()
 
-console.log();
+console.log()
 
 // 表单校验
 const formDataRule = {
@@ -52,24 +51,23 @@ const formDataRule = {
     rules: [
       {
         required: true,
-        errorMessage: "请填写昵称"
-      }
-    ]
+        errorMessage: "请填写昵称",
+      },
+    ],
   },
   avatarUrl: {
     rules: [
       {
         required: true,
-        errorMessage: "请上传头像"
-      }
-    ]
+        errorMessage: "请上传头像",
+      },
+    ],
   },
-
 }
 
 const formData = reactive({
   nickname: userStore.user.nickname,
-  avatarUrl: userStore.user.avatarUrl
+  avatarUrl: userStore.user.avatarUrl,
 })
 
 // 表单
@@ -94,23 +92,24 @@ const uploadImgSuccess = (res: any) => {
  * @returns {*}
  */
 const submit = () => {
-  formDataRef.value.validate().then(async (res: object) => {
-    console.log('--------', res)
-    try {
-      const res = await user.updateUserInfo(formData)
-      uni.navigateBack({
-        success: () => {
-          userStore.getUserInfo()
-        }
-      })
-    } catch (error) {
-      console.log(error)
-    }
-  }).catch((err:object) => {})
+  formDataRef.value
+    .validate()
+    .then(async (res: object) => {
+      console.log("--------", res)
+      try {
+        const res = await user.updateUserInfo(formData)
+        uni.navigateBack({
+          success: () => {
+            userStore.getUserInfo()
+          },
+        })
+      } catch (error) {
+        console.log(error)
+      }
+    })
+    .catch((err: object) => {})
 }
-
 </script>
 
 <style scoped>
-
 </style>
