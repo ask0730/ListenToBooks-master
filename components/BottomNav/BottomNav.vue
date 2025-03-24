@@ -42,8 +42,10 @@ import { onShow } from "@dcloudio/uni-app"
 import { onMounted, ref } from "vue"
 import { getCurrentPageInfo } from "../../utils/utils"
 import { usePlayerStore } from "../../stores/player"
+import { useUserStore } from "../../stores/user"
 
 const playerStore = usePlayerStore()
+const userStore = useUserStore()
 // 引入路由
 const pages = getCurrentPageInfo()
 /* 响应式数据 */
@@ -76,6 +78,13 @@ const navListInfo = ref([
 // 切换导航
 const navChange = (index: number) => {
   currentIndex.value = index
+  // 如果点击"我的"且用户未登录，跳转到登录页面
+  if (index === 4 && !userStore.isLogin) {
+    uni.navigateTo({
+      url: '/pages/login/login'
+    })
+    return
+  }
   uni.navigateTo({
     url: navListInfo.value[index].path,
   })
