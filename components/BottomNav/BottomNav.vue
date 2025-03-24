@@ -3,27 +3,27 @@
     <view style="padding-top: 50rpx" class="gui-relative">
         <gui-flex :customClass="['gui-footer']" direction="row" :wrap="false" alignItems="center">
             <view class="gui-footer-icon-buttons" @tap="navChange(0)">
-                <text :class="[currentIndex == 0 ? 'gui-color-yellow' : 'gui-color-gray', 'gui-icons', 'gui-footer-icon-buttons-icon', 'gui-block']">&#xe608;</text>
-                <text :class="[currentIndex == 0 ? 'gui-color-yellow' : 'gui-color-gray', 'gui-icons', 'gui-footer-icon-buttons-text', 'gui-block']">首页</text>
+                <text :class="[currentIndex == 0 ? 'gui-color-yellow' : 'gui-color-white', 'gui-icons', 'gui-footer-icon-buttons-icon', 'gui-block']">&#xe608;</text>
+                <text :class="[currentIndex == 0 ? 'gui-color-yellow' : 'gui-color-white', 'gui-icons', 'gui-footer-icon-buttons-text', 'gui-block']">首页</text>
             </view>
             <view class="gui-footer-icon-buttons" @tap="navChange(1)">
-                <text :class="[currentIndex == 1 ? 'gui-color-yellow' : 'gui-color-gray', 'gui-icons', 'gui-footer-icon-buttons-icon', 'gui-block', 'iconfont']">&#xe7d5;</text>
-                <text :class="[currentIndex == 1 ? 'gui-color-yellow' : 'gui-color-gray', 'gui-icons', 'gui-footer-icon-buttons-text', 'gui-block']">直播</text>
+                <text :class="[currentIndex == 1 ? 'gui-color-yellow' : 'gui-color-white', 'gui-icons', 'gui-footer-icon-buttons-icon', 'gui-block', 'iconfont']">&#xe7d5;</text>
+                <text :class="[currentIndex == 1 ? 'gui-color-yellow' : 'gui-color-white', 'gui-icons', 'gui-footer-icon-buttons-text', 'gui-block']">直播</text>
             </view>
             <view class="gui-footer-icon-buttons"></view>
             <view class="gui-footer-icon-buttons" @tap="navChange(3)">
-                <text :class="[currentIndex == 3 ? 'gui-color-yellow' : 'gui-color-gray', 'gui-icons', 'gui-footer-icon-buttons-icon', 'gui-block', 'iconfont']">&#xe6ae;</text>
-                <text :class="[currentIndex == 3 ? 'gui-color-yellow' : 'gui-color-gray', 'gui-icons', 'gui-footer-icon-buttons-text', 'gui-block']">排行榜</text>
+                <text :class="[currentIndex == 3 ? 'gui-color-yellow' : 'gui-color-white', 'gui-icons', 'gui-footer-icon-buttons-icon', 'gui-block', 'iconfont']">&#xe6ae;</text>
+                <text :class="[currentIndex == 3 ? 'gui-color-yellow' : 'gui-color-white', 'gui-icons', 'gui-footer-icon-buttons-text', 'gui-block']">排行榜</text>
             </view>
             <view class="gui-footer-icon-buttons" @tap="navChange(4)">
-                <text :class="[currentIndex == 4 ? 'gui-color-yellow' : 'gui-color-gray', 'gui-icons', 'gui-footer-icon-buttons-icon', 'gui-block']">&#xe6fe;</text>
-                <text :class="[currentIndex == 4 ? 'gui-color-yellow' : 'gui-color-gray', 'gui-icons', 'gui-footer-icon-buttons-text', 'gui-block']">我的</text>
+                <text :class="[currentIndex == 4 ? 'gui-color-yellow' : 'gui-color-white', 'gui-icons', 'gui-footer-icon-buttons-icon', 'gui-block']">&#xe6fe;</text>
+                <text :class="[currentIndex == 4 ? 'gui-color-yellow' : 'gui-color-white', 'gui-icons', 'gui-footer-icon-buttons-text', 'gui-block']">我的</text>
             </view>
         </gui-flex>
         <view class="gui-footer-buttons-ab" @tap="navChange(2)">
             <text
                 :class="[
-							currentIndex == 2 ? 'gui-color-yellow' : 'gui-color-gray',
+							currentIndex == 2 ? 'gui-color-yellow' : 'gui-color-white',
               playerStore.playing ? 'playing' : '',
 							'gui-footer',
 							'gui-icons',
@@ -32,7 +32,7 @@
 							'gui-dark-bg-level-2'
 						]"
             >&#xe648;</text>
-            <text :class="[currentIndex == 2 ? 'gui-color-yellow' : 'gui-color-gray', 'gui-icons', 'gui-footer-icon-buttons-text', 'gui-block']">听专辑</text>
+            <text :class="[currentIndex == 2 ? 'gui-color-yellow' : 'gui-color-white', 'gui-icons', 'gui-footer-icon-buttons-text', 'gui-block']">听专辑</text>
         </view>
     </view>
 </template>
