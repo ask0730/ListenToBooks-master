@@ -190,33 +190,30 @@ onMounted(() => {
 .gui-tab-view {
   width: 200rpx;
   height: 100%;
-  background-color: #f6f6f6;
 }
 
 .gui-tab-item {
   height: 100rpx;
-  background: #f6f6f6;
   box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 26rpx;
-  color: #444;
+  color: #FFFFFF;
   font-weight: 400;
   line-height: 1;
 }
 
 .gui-tab-item-active {
   position: relative;
-  color: #000;
+  color: #FFD700;
   font-weight: 600;
-  background: #fff;
 }
 
 .gui-tab-item-active::before {
   content: "";
   position: absolute;
-  border-left: 4px solid red;
+  border-left: 4px solid #FFD700  ;
   height: 32rpx;
   left: 0;
   top: 39rpx;
@@ -227,7 +224,6 @@ onMounted(() => {
 }
 
 .gui-right-box {
-  background-color:#f6f6f6;
 }
 
 .gui-page-view {
@@ -270,7 +266,6 @@ onMounted(() => {
   flex-direction: column;
   margin-top: 80rpx;
   padding: 30rpx 10rpx;
-  background-color: #fff;
   border-radius: 8rpx;
   color: rgba(0, 0, 0, 0.65);
 }
