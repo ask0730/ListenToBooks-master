@@ -244,7 +244,7 @@ export default{
 .gui-indicator-dots{width:750rpx; overflow:visible; z-index:99; left:0; bottom:20rpx; position:absolute;}
 .gui-indicator-dot{margin:6rpx; display:inline-block; background-color:rgba(255,255,255,0.3);}
 .gui-indicator-dots-wrap{padding:0 20rpx; display:flex; justify-content:center; width:100%;}
-.dot-show{opacity:1; background-color:rgba(255,255,255,0.8);}
+.dot-show{opacity:1;}
 .gui-indicator-dot-text{text-align:center; line-height:68rpx; padding:0 4rpx; color:#FFFFFF; font-size:32rpx;}
 .gui-indicator-dot-numbers{overflow:hidden; align-items:center; position:absolute; z-index:1; left:0; bottom:0;}
 .gui-swiper-text{width:200rpx; line-height:68rpx; padding-right:25rpx; overflow:hidden;}
@@ -253,6 +253,8 @@ export default{
 .dot-show{animation:dot-show 300ms linear forwards;}
 /* #endif */
 </style>
+
+
 
 
 
