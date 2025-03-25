@@ -1,46 +1,28 @@
 <template>
-  <view class="gui-wrapper">
-    <view class="gui-menu-wrap">
-      <scroll-view
-        scroll-y
-        scroll-with-animation
-        class="gui-tab-view menu-scroll-view"
-        :scroll-top="scrollTop"
-        :scroll-into-view="itemId"
-      >
-        <view
-          v-for="(item, index) in tabBar"
-          :key="index"
-          class="gui-tab-item"
-          :class="[current == index && 'gui-tab-item-active']"
-          @tap.stop="switchMenu(index)"
-        >
-          <text class="u-line-1">{{ item.categoryName }}</text>
+    <view class="gui-wrapper">
+        <view class="gui-menu-wrap">
+            <scroll-view scroll-y scroll-with-animation class="gui-tab-view menu-scroll-view" :scroll-top="scrollTop" :scroll-into-view="itemId">
+                <view v-for="(item, index) in tabBar" :key="index" class="gui-tab-item" :class="[current == index && 'gui-tab-item-active']" @tap.stop="switchMenu(index)">
+                    <text class="u-line-1">{{ item.categoryName }}</text>
+                </view>
+            </scroll-view>
+            <scroll-view :scroll-top="scrollRightTop" scroll-y scroll-with-animation class="gui-right-box" @scroll="rightScroll">
+                <view class="gui-page-view">
+                    <view class="gui-class-item" :id="'item' + index" v-for="(item, index) in tabBar" :key="index">
+                        <view class="gui-item-title">
+                            <text>{{ item.categoryName }}</text>
+                        </view>
+                        <view class="gui-item-container">
+                            <view @click="handleNavItemOnClick(item1)" class="gui-thumb-box" v-for="(item1, index1) in item.categoryChild" :key="index1">
+                                <view class="gui-item-menu-name">{{ item1.categoryName }}</view>
+                            </view>
+                        </view>
+                        <view style="height:100rpx;width: 10px;"></view>
+                    </view>
+                </view>
+            </scroll-view>
         </view>
-      </scroll-view>
-      <scroll-view
-        :scroll-top="scrollRightTop"
-        scroll-y
-        scroll-with-animation
-        class="gui-right-box"
-        @scroll="rightScroll"
-      >
-        <view class="gui-page-view">
-          <view class="gui-class-item" :id="'item' + index" v-for="(item, index) in tabBar" :key="index">
-            <view class="gui-item-title">
-              <text>{{ item.categoryName }}</text>
-            </view>
-            <view class="gui-item-container">
-              <view @click="handleNavItemOnClick(item1)" class="gui-thumb-box" v-for="(item1, index1) in item.categoryChild" :key="index1">
-                <view class="gui-item-menu-name">{{ item1.categoryName }}</view>
-              </view>
-            </view>
-            <view style="height:100rpx;width: 10px;"></view>
-          </view>
-        </view>
-      </scroll-view>
     </view>
-  </view>
 </template>
 
 <script setup lang="ts">
@@ -60,16 +42,15 @@ const instance = getCurrentInstance() // 获取组件实例
 // 页面可以通过定义 props 来直接接收 url 传入的参数
 // 如：uni.navigateTo({ url: '/pages/index/index?id=10' })
 const props = defineProps({
-  category1Id:{
+  category1Id: {
     type: Number || String,
     required: true,
   }, // 一级分类Id
-  pageTitle:{
+  pageTitle: {
     type: String,
     required: true,
   }, // 一级分类Id
-});
-
+})
 
 /* 方法 */
 // 根据一级分类id获取全部分类信息
@@ -82,10 +63,10 @@ const getCategoryTree = async () => {
   }
 }
 // 导航被点击
-const handleNavItemOnClick = (item:CategoryTreeInterface) => {
+const handleNavItemOnClick = (item: CategoryTreeInterface) => {
   // 去往分类搜索搜索
   uni.navigateTo({
-    url: `/pages/search/search?category1Id=${props.category1Id}&category3Id=${item.categoryId}&pageTitle=${item.categoryName}`
+    url: `/pages/search/search?category1Id=${props.category1Id}&category3Id=${item.categoryId}&pageTitle=${item.categoryName}`,
   })
 }
 // 获取每个栏目的高度
@@ -193,8 +174,8 @@ const rightScroll = async (e) => {
 /* 生命周期 */
 onMounted(async () => {
   uni.setNavigationBarTitle({
-    title: props.pageTitle || '分类'
-  });
+    title: props.pageTitle || "分类",
+  })
   await getCategoryTree() // 获取全部分类信息
   await getMenuItemTop() // 获取每个栏目的高度
   await leftMenuStatus(0) // 初始化左边菜单的状态
@@ -220,33 +201,33 @@ onMounted(async () => {
 .gui-tab-view {
   width: 200rpx;
   height: 100%;
-  background-color: #f6f6f6;
+  //   background-color: #f6f6f6;
 }
 
 .gui-tab-item {
   height: 120rpx;
-  background: #f6f6f6;
+  //   background: #f6f6f6;
   box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 26rpx;
-  color: #444;
+  color: #ffffff;
   font-weight: 400;
   line-height: 1;
 }
 
 .gui-tab-item-active {
   position: relative;
-  color: #000;
+  color: #ffd700;
   font-weight: 600;
-  background: #fff;
+  //   background: #fff;
 }
 
 .gui-tab-item-active::before {
   content: "";
   position: absolute;
-  border-left: 4px solid red;
+  border-left: 4px solid #ffd700;
   height: 32rpx;
   left: 0;
   top: 39rpx;
@@ -257,7 +238,7 @@ onMounted(async () => {
 }
 
 .gui-right-box {
-  background-color:#f6f6f6;
+  //   background-color:#f6f6f6;
 }
 
 .gui-page-view {
@@ -277,7 +258,7 @@ onMounted(async () => {
 
 .gui-item-title {
   font-size: 26rpx;
-  color: gray;
+  color: #ffffff;
   font-weight: bold;
 }
 
@@ -300,9 +281,8 @@ onMounted(async () => {
   flex-direction: column;
   margin-top: 80rpx;
   padding: 30rpx 10rpx;
-  background-color: #fff;
+  background-color: #524f4f;
   border-radius: 8rpx;
-  color: rgba(0, 0, 0, 0.65);
+  color: #ffffff;
 }
-
 </style>
