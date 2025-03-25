@@ -52,4 +52,9 @@ const openDialog = () => {
 .setting-item {
   border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 }
+
+:deep(.uni-section .uni-section-header__decoration) {
+  background-color: yellow !important;
+  color: yellow !important;
+}
 </style>
