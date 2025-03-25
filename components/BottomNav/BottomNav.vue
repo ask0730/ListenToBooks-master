@@ -119,5 +119,4 @@ onShow(() => {
 .playing {
   animation: rotation 6.5s linear infinite;
 }
-</style>
-
+</style>    

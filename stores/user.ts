@@ -12,6 +12,10 @@ export const useUserStore = defineStore("user", {
       amount: 0,
     }
   },
+  getters: {
+    // 新增 isLogin getter，根据 token 是否存在判断用户是否登录
+    isLogin: (state) => !!state.token 
+  },
   actions: {
     // 微信登录
     loginWithWechat() {
@@ -112,4 +116,4 @@ export const useUserStore = defineStore("user", {
       })
     }
   }
-})
+})    
