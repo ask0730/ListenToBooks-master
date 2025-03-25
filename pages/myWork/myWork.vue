@@ -24,7 +24,7 @@
                     <view class="select-container">
                         <gui-select-menu ref="guiSelectMenuRef" :items="(pageData as any)[pageData.currentPageNav].statusList.map((item: any) => item.name)" @select="select"></gui-select-menu>
                         <view class="gui-text-small select-add" @click="()=>addOrEditItem()">
-                            <text class="gui-icons gui-block gui-color-gray gui-text">&#xe6c7;</text>
+                            <text class="gui-icons gui-block gui-color-white gui-text">&#xe6c7;</text>
                         </view>
                     </view>
                 </view>
