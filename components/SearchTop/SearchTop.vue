@@ -34,6 +34,7 @@
             v-if="category1Id && menuList.length > 3 && (queryParam.keyword.trim() || category1Id)"
             v-model:menuList="menuList"
             :themeColor="checkedThemeColor"
+            :inactiveColor="inactiveColor1"
             :duration="300"
             @onConfirm="handleConfirm"
             :isClickMutuallyExclude="true"
@@ -42,6 +43,7 @@
             v-if="category1Id && menuList.length <= 3 && (queryParam.keyword.trim() || category1Id)"
             v-model:menuList="menuList"
             :themeColor="checkedThemeColor"
+            :inactiveColor="inactiveColor1"
             :duration="300"
             @onConfirm="handleConfirm"
             :isClickMutuallyExclude="true"
@@ -50,6 +52,7 @@
             v-if="!category1Id && menuList.length <= 3 && (queryParam.keyword.trim() || category1Id)"
             v-model:menuList="menuList"
             :themeColor="checkedThemeColor"
+            :inactiveColor="inactiveColor1"
             :isClickMutuallyExclude="true"
             :duration="300"
             @onConfirm="handleConfirm"
@@ -83,7 +86,8 @@ const props = defineProps({
     default: true,
   },
 })
-const checkedThemeColor = ref("#008AFF")
+const checkedThemeColor = ref("#FFD700")
+const inactiveColor1 = ref("#FFFFFF")
 // 排序（综合排序[1:asc、1:desc] 播放量[2:asc、2:desc] 发布时间[3:asc、3:desc]；asc:升序 desc:降序）
 const menuList = ref<MenuInterface[]>([
   {
@@ -297,5 +301,9 @@ onMounted(() => {
       border-radius: 40rpx;
     }
   }
+}
+.le-dropdown-menu-item-text .le-dropdown-menu .le-dropdown-menu-item .le-dropdown-cell-item ::v-deep {
+  color: pink !important;
+  background-color: pink !important;
 }
 </style>
