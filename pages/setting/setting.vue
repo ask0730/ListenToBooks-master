@@ -54,7 +54,6 @@ const openDialog = () => {
 }
 
 :deep(.uni-section .uni-section-header__decoration) {
-  background-color: yellow !important;
-  color: yellow !important;
+  background-color: #FFD700  !important;
 }
 </style>
