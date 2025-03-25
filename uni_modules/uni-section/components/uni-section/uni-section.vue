@@ -99,7 +99,7 @@ export default {
 }
 </script>
 <style lang="scss" >
-$uni-primary: #ffd700 !default;
+$uni-primary: #2979ff !default;
 
 .uni-section {
   background-color: #fff;
