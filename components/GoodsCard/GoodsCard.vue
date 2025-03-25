@@ -25,7 +25,7 @@
                 <gui-image :src="item.coverUrl" :width="220" :height="220"></gui-image>
             </view>
             <view class="gui-product-lines">
-                <text class="gui-product-name gui-primary-text">{{ item.albumTitle }}</text>
+                <text class="gui-product-name gui-color-white">{{ item.albumTitle }}</text>
             </view>
             <view style="height: 30rpx"></view>
         </view>
