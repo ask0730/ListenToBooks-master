@@ -28,7 +28,7 @@
             <view class="gui-list-body gui-m-t-10">
               <view class="gui-card-desc">
                 <view class="gui-flex gui-rows gui-nowrap gui-align-items-center">
-                  <text class="gui-card-name gui-primary-text gui-h4 gui-bold">{{user.nickname}}</text>
+                  <text class="gui-card-name gui-h4 gui-bold" style="color: #fff">{{user.nickname}}</text>
                   <uni-icons v-if="user.isVip" custom-prefix="iconfont" type="VIP" class="gui-m-r-10" color="#f78414" size="15"></uni-icons>
                 </view>
               </view>
