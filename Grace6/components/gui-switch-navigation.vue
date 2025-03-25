@@ -70,7 +70,7 @@ export default {
 		activeFontSize     : {type : String,  default : '28rpx'},
 		items              : {type : Array,   default : function () {return []}},
 		activeLineClass    : {type : Array,   default : function () {
-			return ['gui-nav-scale','gui-gtbg-blue', 'gui-gtbg-black'];
+			return ['gui-nav-scale','gui-gtbg-orange', 'gui-gtbg-black'];
 			}},
 		titleClass         : {type : Array,   default : function () {
 			return ['gui-primary-text'];
