@@ -84,7 +84,7 @@
               activeDirection="center"
               lineHeight="50rpx"
               activeFontSize="46rpx"
-              :activeLineClass="['gui-nav-scale', 'gui-gtbg-red']"
+              :activeLineClass="['gui-nav-scale', 'gui-gtbg-orange']"
               @change="(index)=>navChange(index,navItems[index].id)"
             ></gui-switch-navigation>
             <view style="height:20rpx;"></view>
