@@ -4,7 +4,7 @@
 		<template v-slot:gHeader>
 			<view style="height: 44px" class="gui-flex gui-nowrap gui-rows gui-align-items-center">
 				<gui-header-leading @goHome="goHome"></gui-header-leading>
-				<text class="gui-h5 gui-bold gui-flex1 gui-text-center gui-ellipsis gui-primary-text">{{ albumDetailInfo.albumInfo.albumTitle }}</text>
+				<text class="gui-h5 gui-bold gui-flex1 gui-text-center gui-ellipsis gui-color-white">{{ albumDetailInfo.albumInfo.albumTitle }}</text>
 				<view class="gui-flex"><text class="gui-icons gui-block gui-color-drak gui-p-10 gui-b-50 gui-bg-black-opacity3 gui-m-r-10">&#xe604;</text></view>
 				<view style="width: 180rpx"></view>
 			</view>
