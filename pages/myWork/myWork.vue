@@ -52,9 +52,9 @@ const guiSelectMenuRef = ref<InstanceType<typeof GuiSelectMenu>>()
 const navItems = ref([
   { name: "专辑", id: "albumListInfo" },
   { name: "声音", id: "trackInfoListInfo" },
-  { name: "视频", id: "2" },
-  { name: "有声PPT", id: "3" },
-  { name: "咔嚓笔记", id: "4" },
+//   { name: "视频", id: "2" },
+//   { name: "有声PPT", id: "3" },
+//   { name: "咔嚓笔记", id: "4" },
 ])
 // 定义页面数据
 const pageData = reactive({
