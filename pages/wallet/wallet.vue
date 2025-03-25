@@ -18,8 +18,8 @@
 
         <navigator url="/pages/fund/fund?id=consume" class="gui-list-items">
           <view class="gui-list-body gui-border-b">
-            <view class="gui-list-title">
-              <text class="gui-list-title-text gui-list-one-line gui-primary-text">消费记录</text>
+            <view class="gui-list-title gui-color-white">
+              <text class="gui-list-title-text gui-color-white gui-list-one-line gui-primary-text">消费记录</text>
             </view>
           </view>
           <text class="gui-list-arrow-right gui-icons gui-color-gray-light">&#xe601;</text>
@@ -27,8 +27,8 @@
 
         <navigator url="/pages/fund/fund?id=invest" class="gui-list-items">
           <view class="gui-list-body gui-border-b">
-            <view class="gui-list-title">
-              <text class="gui-list-title-text gui-list-one-line gui-primary-text">充值记录</text>
+            <view class="gui-list-title gui-color-white">
+              <text class="gui-list-title-text gui-color-white gui-list-one-line gui-primary-text">充值记录</text>
             </view>
           </view>
           <text class="gui-list-arrow-right gui-icons gui-color-gray-light">&#xe601;</text>
