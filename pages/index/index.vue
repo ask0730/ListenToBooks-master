@@ -1,7 +1,7 @@
 <template>
     <gui-page :customHeader="true" :customFooter="true">
         <template v-slot:gHeader>
-            <view style="height: 44px;" class="gui-flex">
+            <view style="height: 44px;background-color: #2b2e3d" class="gui-flex">
                 <view class="gui-dark-bg-level-1 gui-p-15 gui-flex1" @click="handleSearchOnClick">
                     <gui-search :customClass="['gui-bg-black-opacity1']"></gui-search>
                 </view>
@@ -15,7 +15,7 @@
 
         <template v-slot:gFixedTop>
             <!--			一级导航-->
-            <view class="gui-flex gui-m-b-20">
+            <view class="gui-flex gui-m-b-20" style="background-color: #2b2e3d">
                 <view class="gui-p-r-20">
                     <gui-switch-navigation
                         :items="navItems"
