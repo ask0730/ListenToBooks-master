@@ -16,7 +16,7 @@
         <template v-slot:gFixedTop>
             <!--			一级导航-->
             <view class="gui-flex gui-m-b-20">
-                <view class="gui-bg-white gui-dark-bg-level-3 gui-p-r-20">
+                <view class="gui-p-r-20">
                     <gui-switch-navigation
                         :items="navItems"
                         :currentIndex="category1NavIndex"
