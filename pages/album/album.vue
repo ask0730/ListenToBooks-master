@@ -7,7 +7,7 @@
 			<view class="gui-bg-black-opacity5  gui-color-white">
 				<view class="gui-m-30 gui-flex gui-row">
 					<view class="gui-relative gui-m-20">
-						<text class="gui-absolute-lt gui-bg-red gui-p-l-5 gui-p-r-5 gui-text-small gui-color-white">VIP</text>
+						<text class="gui-absolute-lt gui-bg-orange gui-p-l-5 gui-p-r-5 gui-text-small gui-color-white">VIP</text>
 						<image
 							class="gui-album-img"
 							mode="aspectFill"

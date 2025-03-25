@@ -52,7 +52,7 @@
 					</view>
 					<view style="height:40rpx;"></view>
 					<view v-if="orderInfo?.orderStatus === ORDER_STATUS_MAP.Unpaid" class="pay-btn-container">
-						<button class="gui-bg-red gui-block gui-color-white" @click="handleCheckout">立即结算</button>
+						<button class="gui-bg-orange gui-block gui-color-white" @click="handleCheckout">立即结算</button>
 					</view>
 				</view>
 

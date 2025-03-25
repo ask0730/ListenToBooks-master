@@ -135,7 +135,7 @@
 							class="gui-flex gui-space-between gui-align-items-center gui-padding"
 							>
 							<view class="gui-h4 gui-bold">{{userStore.user.isVip ? '续费会员 优惠多多' : '开通会员 优惠多多'}}</view>
-							<button type="default" class="gui-button gui-bg-red gui-noborder" @click="openAccountPopup">
+							<button type="default" class="gui-button gui-bg-orange gui-noborder" @click="openAccountPopup">
 								<text class="gui-color-white gui-button-text gui-p-l-20 gui-p-r-20 gui-border-radius">{{userStore.user.isVip ? '立即续费' : '立即开通'}}</text>
 							</button>
 						</view>

@@ -17,7 +17,7 @@
     <view class="gui-margin-top gui-padding-x gui-flex gui-row gui-wrap">
         <view class="gui-product" hover-class="gui-tap" v-for="(item, index) in goodsData.list" :key="index" @tap="gotoGoodInfo(index, item)">
             <view class="gui-relative">
-                <text class="gui-absolute-lt gui-bg-red gui-p-l-5 gui-p-r-5 gui-text-small gui-color-white">{{ payTypeMap[item.payType] }}</text>
+                <text class="gui-absolute-lt gui-bg-orange gui-p-l-5 gui-p-r-5 gui-text-small gui-color-white">{{ payTypeMap[item.payType] }}</text>
                 <view class="gui-flex gui-absolute-lb gui-bg-black-opacity7 gui-p-l-5 gui-p-r-5 gui-text-small gui-color-white gui-p-t-5 gui-p-b-5 gui-p-l-20 gui-p-r-20">
                     <text class="gui-icons gui-block gui-color-drak gui-m-r-5 gui-p-t-5">&#xe649;</text>
                     <text>{{ item.playStatNum }}</text>

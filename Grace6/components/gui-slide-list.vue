@@ -26,7 +26,7 @@
 					class="gui-slide-list-img" 
 					mode="aspectFill"></image>
 					<text 
-					class="gui-slide-list-point gui-block gui-bg-red gui-color-white" 
+					class="gui-slide-list-point gui-block gui-bg-orange gui-color-white" 
 					v-if="item.msgnumber > 0">{{item.msgnumber}}</text>
 				</view>
 				<view 

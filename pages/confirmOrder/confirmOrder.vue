@@ -63,7 +63,7 @@
 						</text>
 						<text v-if="Number(orderStore.submitOrderInfo.derateAmount)" class="gui-text-small gui-color-gray">已优惠￥{{ orderStore.submitOrderInfo.derateAmount }}</text>
 					</view>
-					<text class="gui-shoppingcard-checkout gui-bg-red gui-block gui-color-white" @click="handleCheckout">立即结算</text>
+					<text class="gui-shoppingcard-checkout gui-bg-orange gui-block gui-color-white" @click="handleCheckout">立即结算</text>
 				</view>
 				<view><gui-iphone-bottom></gui-iphone-bottom></view>
 			</view>
