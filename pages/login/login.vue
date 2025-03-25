@@ -8,19 +8,19 @@
                 <view style="margin-top: 80rpx">
                     <form @submit="submit">
                         <view>
-                            <text class="gui-text-small gui-color-gray">账户</text>
+                            <text class="gui-text-small gui-color-white">账户</text>
                         </view>
                         <view class="gui-border-b">
                             <input type="text" class="gui-form-input" name="username" placeholder="登录账户" />
                         </view>
                         <view class="gui-margin-top">
-                            <text class="gui-text-small gui-color-gray">密码</text>
+                            <text class="gui-text-small gui-color-white">密码</text>
                         </view>
                         <view class="gui-border-b">
                             <input type="password" class="gui-form-input" name="password" placeholder="密码" />
                         </view>
                         <view class="gui-margin-top gui-flex gui-rows gui-space-between" hover-class="gui-tap">
-                            <text class="gui-text gui-color-gray gui-block gui-text-right" @tap="loginbymsg">短信登录</text>
+                            <text class="gui-text gui-color-white gui-block gui-text-right" @tap="loginbymsg">短信登录</text>
                         </view>
                         <view style="margin-top: 38rpx">
                             <button type="default" class="gui-button gui-noborder" formType="submit" style="border-radius: 50rpx;background-color:#FFD700;">
@@ -37,10 +37,10 @@
                 </view>
                 <view class="gui-flex gui-rows gui-nowrap gui-justify-content-center gui-margin-top">
                     <view @click="openWxLoginDialog" class="other-login-icons" hover-class="gui-tap">
-                        <text class="other-login-icons gui-icons gui-color-gray">&#xe63e;</text>
+                        <text class="other-login-icons gui-icons gui-color-white">&#xe63e;</text>
                     </view>
                     <view class="other-login-icons" hover-class="gui-tap">
-                        <text class="other-login-icons gui-icons gui-color-gray">&#xe6cd;</text>
+                        <text class="other-login-icons gui-icons gui-color-white">&#xe6cd;</text>
                     </view>
                 </view>
             </view>
