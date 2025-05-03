@@ -54,7 +54,7 @@
 				</view>
 			</view>
 
-			<view class="gui-shoppingcard-footer gui-bg-black gui-color-gray gui-border-box gui-border-t">
+			<view class="gui-shoppingcard-footer gui-border-box" style="background-color: #000000;">
 				<view class="gui-flex gui-row gui-space-between gui-align-items-center">
 					<view class="gui-flex gui-column">
 						<text class="gui-color-white gui-text gui-primary-text gui-flex gui-row gui-nowrap">
