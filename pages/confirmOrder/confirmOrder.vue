@@ -29,10 +29,10 @@
 
 						<view
 							class="gui-flex gui-column gui-flex1 gui-m-l-20">
-							<text class="gui-block gui-ellipsis-line2 gui-text">{{item.itemName}}</text>
+							<text class="gui-block gui-color-white gui-ellipsis-line2 gui-text">{{item.itemName}}</text>
 							<text class="gui-text-small gui-m-t-20 gui-m-b-20 gui-block gui-color-red">7天无忧退</text>
 							<view class="gui-flex gui-space-between gui-align-items-end">
-								<text class="gui-h3 gui-bold">￥{{ item.itemPrice }}</text>
+								<text class="gui-color-white gui-h3 gui-bold">￥{{ item.itemPrice }}</text>
 								<text class="gui-block gui-color-gray">
 									<text class="gui-text-small">X</text>
 									1
@@ -135,4 +135,10 @@ const handleCheckout = () => {
 /* #ifdef H5 */
 /* .gui-shoppingcard-footer{bottom:50px;} */
 /* #endif */
+
+/* 深度选择器设置背景颜色（如果样式有作用域） */
+::v-deep .uni-card {
+  background-color: #000 !important;
+  border: 1px solid #FFD700 !important;
+}
 </style>
