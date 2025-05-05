@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+
+<mapper namespace="com.youngqi.tingshu.album.mapper.BaseAttributeMapper">
+    <resultMap id="baseAttributeMap" type="com.youngqi.tingshu.model.album.BaseAttribute" autoMapping="true">
+        <id column="id" property="id"></id>
+        <collection property="attributeValueList" ofType="com.youngqi.tingshu.model.album.BaseAttributeValue" autoMapping="true">
+            <id column="base_attribute_value_id" property="id"></id>
+        </collection>
+    </resultMap>
+    <select id="getAttributeAndValueByC1Id" resultMap="baseAttributeMap">
+        SELECT ba.id,ba.category1_id,ba.attribute_name,ba.create_time,bav.id base_attribute_value_id,bav.attribute_id,bav.value_name,bav.create_time from base_attribute ba LEFT JOIN base_category1 c1 ON ba.category1_id=c1.id left JOIN base_attribute_value bav on ba.id=bav.attribute_id
+        WHERE ba.category1_id = #{category1Id} and ba.is_deleted=0
+    </select>
+
+</mapper>
+

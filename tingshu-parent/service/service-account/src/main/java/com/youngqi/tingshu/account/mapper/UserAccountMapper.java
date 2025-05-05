@@ -1,0 +1,15 @@
+package com.youngqi.tingshu.account.mapper;
+
+import com.youngqi.tingshu.model.account.UserAccount;
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
+
+import java.math.BigDecimal;
+
+@Mapper
+public interface UserAccountMapper extends BaseMapper<UserAccount> {
+
+    int checkAndDeduct(@Param("userId") Long userId,@Param("amount") BigDecimal amount);
+
+}
