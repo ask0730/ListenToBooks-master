@@ -6,7 +6,7 @@
 					<text class="gui-h3 gui-color-white gui-block gui-p-l-30 gui-p-t-30 gui-p-b-50">{{ orderInfo?.orderStatusName }}</text>
 				</view>
 
-				<view class="gui-absolute-lb gui-creation-live" style="background-color: pink;">
+				<view class="gui-absolute-lb gui-creation-live" style="background-color: #000">
 
 					<scroll-view scroll-y style="height: 620rpx; width:670rpx;" class="gui-p-10">
 					  <view class="gui-flex gui-align-items-center gui-m-r-50 gui-m-b-20" v-for="item in orderInfo?.orderDetailList" :key="item.id">
@@ -96,11 +96,13 @@ onLoad(async (options: {orderNo: string}) => {
 </script>
 <style scoped>
 .gui-creation-live {
-	height: 80rpx;
-	bottom: -20rpx;
-	left: 25rpx;
-	border-radius: 20rpx;
-	width: 700rpx;
+	background-color: #000;
+    height: 180rpx;
+    bottom: -250rpx;
+    left: 25rpx;
+    border-radius: 20rpx;
+    width: 700rpx;
+    border: 1px solid yellow;
 }
 
 .gui-album-img {
