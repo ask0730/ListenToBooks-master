@@ -33,7 +33,7 @@
 							<text class="gui-text-small gui-m-t-20 gui-m-b-20 gui-block gui-color-red">7天无忧退</text>
 							<view class="gui-flex gui-space-between gui-align-items-end">
 								<text class="gui-color-white gui-h3 gui-bold">￥{{ item.itemPrice }}</text>
-								<text class="gui-block gui-color-gray">
+								<text class="gui-block gui-color-white">
 									<text class="gui-text-small">X</text>
 									1
 								</text>
