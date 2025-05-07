@@ -1,15 +1,15 @@
 <template>
 	<gui-page>
 		<template v-slot:gBody>
-			<view class="gui-relative" style="background-color: pink;">
+			<view class="gui-relative">
 				<view class="gui-list gui-padding gui-bg-orange gui-p-b-80 gui-p-t-80">
 					<text class="gui-h3 gui-color-white gui-block gui-p-l-30 gui-p-t-30 gui-p-b-50">{{ orderInfo?.orderStatusName }}</text>
 				</view>
 
-				<view class="gui-absolute-lb gui-creation-live" style="background-color: #000">
+				<view class="gui-absolute-lb gui-creation-live">
 
-					<scroll-view scroll-y style="height: 620rpx; width:670rpx;" class="gui-p-10">
-					  <view class="gui-flex gui-align-items-center gui-m-r-50 gui-m-b-20" v-for="item in orderInfo?.orderDetailList" :key="item.id">
+					<scroll-view scroll-y style="height: 620rpx; width:670rpx;" class="gui-p-10 ">
+					  <view class="gui-flex gui-align-items-center gui-m-r-50 gui-m-b-20 gui-creation-live1" v-for="item in orderInfo?.orderDetailList" :key="item.id">
 					  	<image
 					  		class="gui-album-img"
 					  		mode="aspectFill"
@@ -96,12 +96,23 @@ onLoad(async (options: {orderNo: string}) => {
 </script>
 <style scoped>
 .gui-creation-live {
+	/* background-color: #000; */
+    height: 180rpx;
+    bottom: -250rpx;
+    left: 25rpx;
+    /* border-radius: 20rpx; */
+    width: 700rpx;
+    /* border: 1px solid yellow; */
+}
+
+
+.gui-creation-live1 {
 	background-color: #000;
     height: 180rpx;
     bottom: -250rpx;
     left: 25rpx;
     border-radius: 20rpx;
-    width: 700rpx;
+    width: 650rpx;
     border: 1px solid yellow;
 }
 
