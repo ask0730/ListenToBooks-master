@@ -68,25 +68,6 @@ export const useOrderStore = defineStore("order", {
         console.log('错误响应数据:', error.response?.data)
         console.log('错误堆栈信息:', error.stack)
         console.log('完整错误对象:', JSON.stringify(error, null, 2))
-        
-        // 获取详细的错误信息
-        const errorMessage = error.response?.data?.message || error.message || '提交订单失败'
-        const errorCode = error.response?.data?.code
-        
-        // 根据错误码处理不同情况
-        if (errorCode === 20001) {
-          uni.showModal({
-            title: '余额不足',
-            content: errorMessage,
-            showCancel: false
-          })
-        } else {
-          uni.showModal({
-            title: '提交订单失败',
-            content: `错误信息：${errorMessage}\n错误代码：${errorCode || '未知'}`,
-            showCancel: false
-          })
-        }
       }
     },
     // 纯订单号提交订单
@@ -160,11 +141,6 @@ export const useOrderStore = defineStore("order", {
         }
       } catch (error) {
         console.log(error);
-        uni.showToast({
-          title: '查询支付状态出错',
-          icon: 'error',
-          duration: 2000
-        })
       }
     },
     // 充值金额
