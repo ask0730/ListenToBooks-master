@@ -85,6 +85,15 @@ const navChange = (index: number) => {
     })
     return
   }
+  // 如果点击直播，显示开发中提示
+  if (index === 1) {
+    uni.showToast({
+      title: '努力开发中，敬请期待',
+      icon: 'none',
+      duration: 2000
+    })
+    return
+  }
   uni.navigateTo({
     url: navListInfo.value[index].path,
   })
