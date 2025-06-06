@@ -1,20 +1,20 @@
 <template>
 	<gui-page>
 		<template v-slot:gBody>
-			<view class="gui-flex gui-column gui-m-40 gui-bg-black gui-p-20 gui-border-radius">
+			<view class="gui-flex gui-column gui-m-40 gui-bg-white gui-p-20 gui-border-radius">
 				<view class="gui-flex gui-row gui-space-between">
-					<text class="gui-color-white">购买账号</text>
-					<text class="gui-color-white">账号余额</text>
+					<text class="gui-color-gray">购买账号</text>
+					<text class="gui-color-gray">账号余额</text>
 				</view>
-				<view class="gui-flex gui-row gui-space-between gui-m-t-20 gui-color-white">
+				<view class="gui-flex gui-row gui-space-between gui-m-t-20">
 					<text class="gui-h4">{{ userStore.user.nickname }}</text>
 					<view>
-						<text class="gui-h4 gui-bold gui-color-white">{{ userStore.amount }}</text>
+						<text class="gui-h4 gui-bold">{{ userStore.amount }}</text>
 					</view>
 				</view>
 			</view>
 
-			<view class="gui-bg-black gui-p-20 gui-border-radius">
+			<view class="gui-bg-white gui-p-20 gui-border-radius">
 				<uni-card
 					margin="5px"
 					padding="5px"
@@ -29,11 +29,11 @@
 
 						<view
 							class="gui-flex gui-column gui-flex1 gui-m-l-20">
-							<text class="gui-block gui-color-white gui-ellipsis-line2 gui-text">{{item.itemName}}</text>
+							<text class="gui-block gui-ellipsis-line2 gui-text">{{item.itemName}}</text>
 							<text class="gui-text-small gui-m-t-20 gui-m-b-20 gui-block gui-color-red">7天无忧退</text>
 							<view class="gui-flex gui-space-between gui-align-items-end">
-								<text class="gui-color-white gui-h3 gui-bold">￥{{ item.itemPrice }}</text>
-								<text class="gui-block gui-color-white">
+								<text class="gui-h3 gui-bold">￥{{ item.itemPrice }}</text>
+								<text class="gui-block gui-color-gray">
 									<text class="gui-text-small">X</text>
 									1
 								</text>
@@ -44,26 +44,26 @@
 				</uni-card>
 
 
-				<!-- <view class="split-line gui-m-t-20 gui-m-b-20"></view> -->
+				<view class="split-line gui-m-t-20 gui-m-b-20"></view>
 
 				<view class="gui-flex gui-justify-content-end gui-m-t-40 gui-m-b-100">
-					<text class="gui-bold gui-color-white">
+					<text class="gui-bold">
 						小计:
 						<text class="gui-color-red">￥{{orderStore.submitOrderInfo.originalAmount}}</text>
 					</text>
 				</view>
 			</view>
 
-			<view class="gui-shoppingcard-footer gui-border-box" style="background-color: #000000;">
+			<view class="gui-shoppingcard-footer gui-bg-gray gui-dark-bg-level-1 gui-border-box gui-border-t">
 				<view class="gui-flex gui-row gui-space-between gui-align-items-center">
 					<view class="gui-flex gui-column">
-						<text class="gui-color-white gui-text gui-primary-text gui-flex gui-row gui-nowrap">
+						<text class="gui-text gui-primary-text gui-flex gui-row gui-nowrap">
 							合计:
 							<text class="gui-color-red gui-h4">￥{{ orderStore.submitOrderInfo.orderAmount }}</text>
 						</text>
-						<text v-if="Number(orderStore.submitOrderInfo.derateAmount)" class="gui-text-small gui-color-white">已优惠￥{{ orderStore.submitOrderInfo.derateAmount }}</text>
+						<text v-if="Number(orderStore.submitOrderInfo.derateAmount)" class="gui-text-small gui-color-gray">已优惠￥{{ orderStore.submitOrderInfo.derateAmount }}</text>
 					</view>
-					<text class="gui-shoppingcard-checkout gui-bg-orange gui-block gui-color-black" @click="handleCheckout">立即结算</text>
+					<text class="gui-shoppingcard-checkout gui-bg-orange gui-block gui-color-white" @click="handleCheckout">立即结算</text>
 				</view>
 				<view><gui-iphone-bottom></gui-iphone-bottom></view>
 			</view>
@@ -135,10 +135,4 @@ const handleCheckout = () => {
 /* #ifdef H5 */
 /* .gui-shoppingcard-footer{bottom:50px;} */
 /* #endif */
-
-/* 深度选择器设置背景颜色（如果样式有作用域） */
-::v-deep .uni-card {
-  background-color: #000 !important;
-  border: 1px solid #FFD700 !important;
-}
 </style>
