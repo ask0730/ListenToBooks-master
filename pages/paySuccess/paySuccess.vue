@@ -46,7 +46,7 @@ const onTapReturn = (mode:number) =>  {
   font-size: 48rpx;
   line-height: 72rpx;
   font-weight: bold;
-  color: #333333;
+  color: #fff;
   display: flex;
   align-items: center;
 }
