@@ -51,7 +51,6 @@ export const useOrderStore = defineStore("order", {
     async submitOrder() {
       try {
         const res = await order.submitOrder(this.submitOrderInfo)
-        console.log('提交订单响应数据:', res)
         // 保存订单号
         this.orderNo = res.data.orderNo
         // 如果是余额支付，直接支付成功
@@ -63,11 +62,8 @@ export const useOrderStore = defineStore("order", {
           // 查询支付状态
           await this.queryOrderPayStatus(res.data.orderNo)
         }
-      } catch (error: any) {
-        console.log('提交订单错误:', error)
-        console.log('错误响应数据:', error.response?.data)
-        console.log('错误堆栈信息:', error.stack)
-        console.log('完整错误对象:', JSON.stringify(error, null, 2))
+      } catch (error) {
+        console.log(error)
       }
     },
     // 纯订单号提交订单
