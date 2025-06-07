@@ -229,8 +229,10 @@ const props = defineProps({
 const playerStore = usePlayerStore()
 const systemHeight = ref(0);
 const swiperHeight = computed(() => {
-	return systemHeight.value - uni.upx2px(113);
+	const info = uni.getSystemInfoSync();
+	return systemHeight.value -  133 * (info.screenWidth / 750);
 });
+
 const scrollHeight = computed(() => {
 	return systemHeight.value - uni.upx2px(113) - uni.upx2px(135);
 });
